@@ -1,0 +1,36 @@
+﻿<Window x:Class="Lab1_Game.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab1_Game"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="MainWindow" Height="630" Width="815" Closed="Window_Closed">
+    <Canvas Name="MyCanvas" Focusable="True" KeyUp="KeyBoardUp" KeyDown="KeyBoardDown">
+        <Canvas.Background>
+            <ImageBrush ImageSource="/images/back.jpg" Stretch="UniformToFill"/>
+        </Canvas.Background>
+        <Label Name = "ScoreLabel" Height="39" Width="257" Canvas.Left="10" Canvas.Top="10" FontSize="16" FontWeight="Bold" Panel.ZIndex="5"></Label>
+        <Border BorderBrush="Black" Canvas.Right="0" Height="223" Canvas.Left="659" RenderTransformOrigin="0.5,0.5" Width="156" HorizontalAlignment="Center" VerticalAlignment="Top" Panel.ZIndex="5">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+            <TextBlock Name="LeaderBoardText" FontSize="13" FontWeight="Bold" Foreground="Black" Margin="-25,0,0,0">Leaderboard:<LineBreak/></TextBlock>
+        </Border>
+        <Image Name="Tiger1" Tag ="Tiger" Height="64" Width="64" Canvas.Left="100" Canvas.Top="104" Source="/images/tiger.png" Panel.ZIndex="3"/>
+        <Image Name="Tiger2" Tag ="Tiger" Height="64" Width="64" Canvas.Left="100" Canvas.Top="363" Source="/images/tiger.png" Panel.ZIndex="3"/>
+        <Image Name="Tiger3" Tag ="Tiger" Height="64" Width="64" Canvas.Left="579" Canvas.Top="88" Source="/images/tiger.png" Panel.ZIndex="3"/>
+        <Image Name="Tiger4" Tag ="Tiger" Height="64" Width="64" Canvas.Left="671" Canvas.Top="331" Source="/images/tiger.png" Panel.ZIndex="3"/>
+        <Image Name="cabbageImg1" Tag ="Cabbage" Height="48" Width="48" Canvas.Left="952" Canvas.Top="215" Source="/images/cabbage.png" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Image Name="cabbageImg2" Tag ="Cabbage" Height="48" Width="48" Canvas.Left="952" Canvas.Top="215" Source="/images/cabbage.png" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Image Name="cabbageImg3" Tag ="Cabbage" Height="48" Width="48" Canvas.Left="952" Canvas.Top="215" Source="/images/cabbage.png" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Image Name="berryImg1" Tag ="Berry" Height="48" Width="48" Canvas.Left="952" Canvas.Top="215" Source="/images/berry.png" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Image Name="berryImg2" Tag ="Berry" Height="48" Width="48" Canvas.Left="952" Canvas.Top="215" Source="/images/berry.png" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Image x:Name="Animal" Height="64" Width="64" Canvas.Left="368" Canvas.Top="260" HorizontalAlignment="Center" VerticalAlignment="Top" Source="/images/deer.png"/>
+    </Canvas>
+</Window>

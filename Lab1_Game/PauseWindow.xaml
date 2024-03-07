@@ -1,0 +1,47 @@
+﻿<Window x:Class="Lab1_Game.PauseWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="PauseWindow" Height="400" Width="300" 
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        UseLayoutRounding="True"
+        FontSize="30"
+        AllowsTransparency="True"
+        Background="Transparent" KeyDown="Window_KeyDown">
+    <Window.Resources>
+        <Style TargetType="{x:Type Button}">
+
+        </Style>
+        <Style x:Key="MyFocusVisualStyle">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Border BorderBrush="#FFCE9501" BorderThickness="5" Margin="1" Opacity="1">
+                            
+                        </Border>
+                        
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Border BorderBrush="#FFCE9501" BorderThickness="5" CornerRadius="10" Margin="1" Opacity="0.9">
+        <Border.Background>
+            <SolidColorBrush Color="Black" Opacity="0.5">
+               
+            </SolidColorBrush>
+        </Border.Background>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Button Name="ContinueBtn" FocusVisualStyle="{DynamicResource MyFocusVisualStyle}" Margin="31,27,34,26" Grid.Row="0" Content="Continue" Background="#FFFFBC29" FontWeight="Bold" Click="ContinueBtn_Click" MouseEnter="ContinueBtn_MouseEnter"></Button>
+            <Button Name="RestartBtn" FocusVisualStyle="{DynamicResource MyFocusVisualStyle}" Margin="32,26,33,27" Grid.Row="1" Content="Restart" Background="#FFFFBC29" FontWeight="Bold" Click="RestartBtn_Click" MouseEnter="RestartBtn_MouseEnter"></Button>
+            <Button Name="ExitBtn" FocusVisualStyle="{DynamicResource MyFocusVisualStyle}" Margin="32,26,33,27" Grid.Row="2" Content="Exit" Background="#FFFFBC29" FontWeight="Bold" Click="ExitBtn_Click" MouseEnter="ExitBtn_MouseEnter"></Button>
+        </Grid>
+    </Border>
+    
+</Window>

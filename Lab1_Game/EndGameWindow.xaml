@@ -1,0 +1,49 @@
+﻿<Window x:Class="Lab1_Game.EndGameWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="PauseWindow" Height="400" Width="300" 
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        UseLayoutRounding="True"
+        FontSize="30"
+        AllowsTransparency="True"
+        Background="Transparent">
+    <Window.Resources>
+        <Style TargetType="{x:Type Button}">
+
+        </Style>
+        <Style x:Key="MyFocusVisualStyle">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Border BorderBrush="#FFCE9501" BorderThickness="5" Margin="1" Opacity="1">
+
+                        </Border>
+
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Border BorderBrush="#FFCE9501" BorderThickness="5" CornerRadius="10" Margin="1" Opacity="0.9">
+        <Border.Background>
+            <SolidColorBrush Color="Black" Opacity="0.5">
+
+            </SolidColorBrush>
+        </Border.Background>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <TextBlock TextAlignment="Center" FontSize="38" FontWeight="Bold" Foreground="White" VerticalAlignment="Top"  HorizontalAlignment="Center" Margin="0,36,0,0">You died!</TextBlock>
+            <TextBlock Name="ScoreText" TextAlignment="Center" Grid.Row="1" FontSize="24" Foreground="White" VerticalAlignment="Center"  HorizontalAlignment="Center">Score:</TextBlock>
+            <Button Name="RestartBtn" FocusVisualStyle="{DynamicResource MyFocusVisualStyle}" Margin="32,11,33,10" Grid.Row="2" Content="Restart" Background="#FFFFBC29" FontWeight="Bold" Click="RestartBtn_Click" MouseEnter="RestartBtn_MouseEnter" Height="76.8"/>
+            <Button Name="ExitBtn" FocusVisualStyle="{DynamicResource MyFocusVisualStyle}" Margin="32,11,33,11" Grid.Row="3" Content="Exit" Background="#FFFFBC29" FontWeight="Bold" Click="ExitBtn_Click" MouseEnter="ExitBtn_MouseEnter" Height="76.8"/>
+        </Grid>
+    </Border>
+
+</Window>
